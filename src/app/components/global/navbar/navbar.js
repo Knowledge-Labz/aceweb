@@ -40,8 +40,8 @@ export default function Navbar() {
                 <Grid item md={1} lg={1}>
                     <Image 
                         alt="ACE Logo"
-                        width={200}
-                        height={200}
+                        width={150}
+                        height={150}
                         priority
                         style={{transform: "translateY(-8px)"}}
                         src="/logo.svg" />
