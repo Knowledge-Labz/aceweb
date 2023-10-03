@@ -156,6 +156,10 @@
   padding-bottom: 2vh;
 }
 
+.cta-section p {
+  line-height: 120%;
+}
+
 .cta-section {
   font-family: 'Titillium Web', sans-serif;
   width: 100vw;
