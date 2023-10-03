@@ -27,12 +27,13 @@ export default function Cta() {
                     </Grid>
                     {i18nStrings["fr"].homepage.cta_blocks.map((item, index) => (
                         <Grid item sm={12} md={2.4} lg={2.4} key={index}>
-                            <Stack spacing={1}>
+                            <Stack spacing={0}>
                                 <Image
                                     alt={item.image}
                                     width={150}
                                     height={150}
                                     src={item.image} />
+                                    <br/>
                                 <h3>{item.title}</h3>
                                 
                                 {item.paragraphs.map((item, index) => (
