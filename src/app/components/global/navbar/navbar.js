@@ -40,20 +40,14 @@ export default function Navbar() {
                 <Grid item md={1} lg={1}>
                     <Image 
                         alt="ACE Logo"
-                        width={92}
-                        height={52}
+                        width={200}
+                        height={200}
                         priority
                         style={{transform: "translateY(-8px)"}}
                         src="/logo.svg" />
                 </Grid>
                 <Grid item md={3} lg={3}>
-                    <Image 
-                        alt="QC Logo"
-                        width={48}
-                        height={32}
-                        priority
-                        style={{transform: "translateY(-13px)"}}
-                        src="/logo_qc.svg" />
+                    <span />
                 </Grid>
                 <Grid item
                     md={5}
