@@ -166,7 +166,7 @@
 }
 
 .cta-section button {
-  font-size: 12px;
+  font-size: 16px;
   color:rgb(223, 29, 26);
   border-radius: 100px;
   width: 10vw;
@@ -238,7 +238,7 @@
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 0vw solid transparent;
-  border-bottom: 25vh solid rgb(223, 29, 26);
+  border-bottom: 25vh solid rgba(223, 29, 26, 0.8);
   z-index: -1;
 }
 
@@ -320,7 +320,7 @@
     line-height: 150%;
   }
   .cta-section button {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 20px;
     margin-top: 4vh;
     margin-bottom: 10vh;
