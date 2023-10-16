@@ -16,7 +16,7 @@ export default function Navbar() {
           }
     
           // remember current page location to use in the next move
-          setLastScrollY(window.scrollY);
+          setLastScrollY(window.scrollY); 
         }
       };
     
