@@ -2,8 +2,34 @@
 import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import Image from 'next/image'
+import { useState, useEffect } from 'react';
 export default function Navbar() {
+    const [barVisible, setBarVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(1);
 
+    const controlNavbar = () => {
+        if (typeof window !== 'undefined') { 
+          if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+            setBarVisible(false); 
+          } else { // if scroll up show the navbar
+            setBarVisible(true);  
+          }
+    
+          // remember current page location to use in the next move
+          setLastScrollY(window.scrollY); 
+        }
+      };
+    
+      useEffect(() => {
+        if (typeof window !== 'undefined') {
+          window.addEventListener('scroll', controlNavbar);
+    
+          // cleanup function
+          return () => {
+            window.removeEventListener('scroll', controlNavbar);
+          };
+        }
+      }, [lastScrollY]);
     const pages = [
         {
             name: "Accueil",
@@ -27,11 +53,17 @@ export default function Navbar() {
         }
     ]
     return(
-        <nav className="navbar-large glass">
+        <nav className='navbar-large'>
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, opacity: { duration: 1 } }}
+            className='glass'
+            variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+                transition: { duration: 1 }
+            }}
+            initial="visible"
+            animate={ barVisible ? "visible" : "hidden" }
+            
         >
             <Grid container spacing={3}>
                 <Grid item md={2} lg={2}>

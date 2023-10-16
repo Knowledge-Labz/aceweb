@@ -14,8 +14,8 @@ export default function Cta() {
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 90, delay: 1, opacity: { duration: 2 } }}
             variants={{
-                visible: { opacity: 1 },
-                hidden: { opacity: 0 }
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 }
             }}
             >
             <Grid container spacing={3}>
@@ -37,7 +37,7 @@ export default function Cta() {
                                 <h3>{item.title}</h3>
                                 
                                 {item.paragraphs.map((item, index) => (
-                                    <p key={index}>{item}</p>
+                                    <div><p key={index}>{item}</p><br/></div>
                                 ))}
                             </Stack>
                         </Grid>

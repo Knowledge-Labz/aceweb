@@ -11,7 +11,7 @@ export default function Home() {
     document.body.style.overflowX = "hidden";
 });
   return (
-    <main className="">
+    <main className="no-top">
       <style>
         @import url(&quot;https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap&quot;);
       </style>

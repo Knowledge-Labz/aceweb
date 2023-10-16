@@ -17,12 +17,14 @@
 
 .hero-section {
   font-family: 'Titillium Web', sans-serif;
-  background: url("./background.jpg") no-repeat center center fixed;
-  background-clip: border-box;
+  background: url("./background.jpg") no-repeat center fixed;
   background-size: cover;
-  transition: background-image 0.2s ease-in-out;
   width: 100vw;
   height: 110vh;
+}
+
+.no-top-margin {
+  margin-top: 0;
 }
 
 .hero-section h1 {
@@ -105,15 +107,11 @@
   font-family: 'Titillium Web', sans-serif;
   width: 100vw;
   justify-content: space-between;
-  height: 12vh;
-  padding-top: 4vh;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   position: sticky;
   border-radius: 0.5rem;
   top: 0;
-    
 }
 
 .explainer-section h2 {
@@ -163,6 +161,7 @@
 .cta-section {
   font-family: 'Titillium Web', sans-serif;
   width: 100vw;
+  height: 110vh;
   padding-bottom: 5vh;
 }
 
@@ -185,6 +184,7 @@
 /* className glass */
 .glass {
   backdrop-filter: blur(5px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -245,4 +245,87 @@
 .details-carousel {
   padding-top: 15vh;
   z-index: -1;
+}
+
+.br {
+  display: block;
+  margin-bottom: -1em;
+}
+
+@media (min-width: 1800px) {
+  .glass a {
+    font-size: 16px;
+  }
+  .hero-section {
+    height: 100vh;
+  }
+  .hero-section h1 {
+    font-size: 72px;
+    padding-bottom: 5vh;
+  }
+  .hero-section h2 {
+    font-size: 24px;
+  }
+  .hero-section button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+  }
+  .details-section {
+    padding: 100px 200px;
+  }
+  .details-section h2 {
+    font-size: 52px;
+    line-height: 120%;
+    padding-bottom: 3vh;
+  }
+  .details-section p {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .details-section li {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .details-section button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+  }
+  .triangle {
+    left: 40vw;
+  }
+
+  .explainer-section h2 {
+    font-size: 52px;
+    line-height: 120%;
+    padding-bottom: 3vh;
+  }
+  .explainer-section p {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .cta-section h2 {
+    font-size: 52px;
+    line-height: 120%;
+    padding-bottom: 10vh;
+  }
+  .cta-section h3 {
+    font-size: 28px;
+    line-height: 120%;
+    padding-bottom: 2vh;
+  }
+  .cta-section p {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .cta-section button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+  }
+  .cta-section img {
+    width: 60%;
+  }
 }
