@@ -27,7 +27,7 @@ export default function Cta() {
                     </Grid>
                     {i18nStrings["fr"].homepage.cta_blocks.map((item, index) => (
                         <Grid item sm={12} md={2.4} lg={2.4} key={index}>
-                            <Stack spacing={0}>
+                            <Stack spacing={0} className={index === 0 || index === 2 ? `cta-content-${index}` : ''}>
                                 <Image
                                     alt={item.image}
                                     width={150}
@@ -37,7 +37,11 @@ export default function Cta() {
                                 <h3>{item.title}</h3>
                                 
                                 {item.paragraphs.map((item, index) => (
-                                    <div><p key={index}>{item}</p><br/></div>
+                                    <div 
+                                        key={index}
+                                        >
+                                            <p>{item}</p><br/>
+                                    </div>
                                 ))}
                             </Stack>
                         </Grid>

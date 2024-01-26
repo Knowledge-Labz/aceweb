@@ -22,7 +22,7 @@ export default function Details() {
                     <h2>{i18nStrings["fr"].homepage.details1_title}</h2>
                     <br/>
                     <br/>
-                    <p>{i18nStrings["fr"].homepage.details1_paragraph}</p>
+                    <p className='details-spacer'>{i18nStrings["fr"].homepage.details1_paragraph}</p>
                     <br/>
                     <br/>
                     <ul>
